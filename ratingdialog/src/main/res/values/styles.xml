@@ -11,7 +11,7 @@
         <item name="android:backgroundDimAmount">0.4</item>
     </style>
 
-    <style name="dialog_blue_button" parent="android:Widget.Button">
+    <style name="dialog_blue_button" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:textSize">18sp</item>
@@ -20,4 +20,5 @@
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:textColor">@color/button_text_color</item>
     </style>
+
 </resources>
