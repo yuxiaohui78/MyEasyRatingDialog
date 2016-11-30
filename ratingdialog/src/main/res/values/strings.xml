@@ -1,0 +1,8 @@
+<resources>
+  <string name="erd_title">Rate me</string>
+  <string name="erd_message">Thanks you for using this app. Hope it helps you. Please take a minute to rate this app and help support to improve more new features. :)</string>
+
+  <string name="erd_no_thanks">No, thanks</string>
+  <string name="erd_remind_me_later">Remind me later</string>
+  <string name="erd_rate_now">Rate me now</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EasyRatingDialog</string>
+    <string name="hello_world">Hello world!</string>
+
+    <integer name="erd_launch_times">7</integer>
+    <integer name="erd_max_days_after">4</integer>
+
+    <string name="erd_title">Sample Rate me</string>
+    <string name="erd_message">Please take a minute to rate this app and help support to improve more new features. :)</string>
+
+    <string name="erd_no_thanks">No</string>
+    <string name="erd_remind_me_later">Remind later</string>
+    <string name="erd_rate_now">Rate now</string>
+
+</resources>
