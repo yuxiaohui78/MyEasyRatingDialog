@@ -38,7 +38,7 @@ allprojects {
 
 ```gradle
 dependencies {
-	        compile 'com.github.yuxiaohui78:MyEasyRatingDialog:v1.0.0'
+	        compile 'com.github.yuxiaohui78:MyEasyRatingDialog:v1.0.1'
 	}
 ```
 
