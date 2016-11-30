@@ -1,4 +1,6 @@
-
+## Code Base
+Code is based on this source code.
+>https://github.com/fernandodev/easy-rating-dialog
 
 This lib provides a simple way to display an alert dialog for rating app.
 
