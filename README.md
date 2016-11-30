@@ -1,4 +1,4 @@
-![alt tag](https://github.com/yuxiaohui78/MyEasyRatingDialog/blob/master/screenshot/screenshot.png "Screenshot")
+![alt tag](https://github.com/yuxiaohui78/MyEasyRatingDialog/blob/master/screenshot/screenshot.png "Screenshot" width="320px")
 
 This lib provides a simple way to display an alert dialog for rating app.
 
