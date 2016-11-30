@@ -11,12 +11,11 @@ Default conditions to show:
   - [Installation](#installation)
   - [Using](#using)
   - [Tips](#tips)
-    - [Condition triggers](#condition-triggers)
     - [Useful public methods](#useful-public-methods)
     - [Internationalization](#internationalization)
     - [Constants](#constants)
-  - [Samples Usage](#samples-usage)
-
+    - [Screenshot](#screenshot)
+  
   - [License](#license)
 
 ## Installation
@@ -132,7 +131,7 @@ And override the values:
 ```
 
 
-
+### Screenshot
 ![alt tag](https://github.com/yuxiaohui78/MyEasyRatingDialog/blob/master/screenshot/screenshot.png "Screenshot" width="320px")
 
 ## License
