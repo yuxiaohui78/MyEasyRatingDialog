@@ -2,6 +2,7 @@
 Code is based on this source code.
 >https://github.com/fernandodev/easy-rating-dialog
 
+## Description
 This lib provides a simple way to display an alert dialog for rating app.
 
 Default conditions to show:
