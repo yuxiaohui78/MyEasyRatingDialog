@@ -1,8 +1,8 @@
-Easy Rating Dialog [![Build Status](https://travis-ci.org/fernandodev/easy-rating-dialog.svg?branch=master)](https://travis-ci.org/fernandodev/easy-rating-dialog)[![Android Arsenal](http://img.shields.io/badge/Android%20Arsenal-easy--rating--dialog-blue.svg?style=flat)](http://android-arsenal.com/details/1/844)
-==
+## Code Base
+Code is based on this source code.
+>https://github.com/fernandodev/easy-rating-dialog
 
-<img src="http://i.imgur.com/t8wSjfU.png" width="320px"><img src="http://i.imgur.com/kbjGqZW.png" width="320px">
-
+## Description
 This lib provides a simple way to display an alert dialog for rating app.
 
 Default conditions to show:
@@ -14,15 +14,11 @@ Default conditions to show:
   - [Installation](#installation)
   - [Using](#using)
   - [Tips](#tips)
-    - [Condition triggers](#condition-triggers)
     - [Useful public methods](#useful-public-methods)
     - [Internationalization](#internationalization)
     - [Constants](#constants)
-  - [Dagger Issues](#dagger-issues)
-  - [Samples Usage](#samples-usage)
-  - [Testing](#testing)
-  - [Showcase](#showcase)
-  - [Change Logs](#change-logs)
+    - [Screenshot](#screenshot)
+  
   - [License](#license)
 
 ## Installation
@@ -32,31 +28,19 @@ It's very simple with gradle ;)
 Add `mavenCentral` as repository source:
 
 ```gradle
-repositories {
-  mavenCentral()
-}
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
-
-And finnaly add this line inside `dependencies { }` section:
 
 ```gradle
-compile 'com.github.fernandodev.easyratingdialog:easyratingdialog:+'
+dependencies {
+	        compile 'com.github.yuxiaohui78:MyEasyRatingDialog:v1.0.1'
+	}
 ```
-
-* The `+` symbol indicates to gradle to get the latest version.
-* Current version: `1.1.1`
-
-**ATTENTION**
-
-If you are using [afollestad:material-dialogs](https://github.com/afollestad/material-dialogs) you must esclude this module from EasyRatingDialog lib to avoid lib conflicting:
-
-```gradle
-  compile('com.github.fernandodev.easyratingdialog:easyratingdialog:1.1.0') {
-    exclude module: 'material-dialogs'
-  }
-```
-
-* See the sample if there are any doubts.
 
 ## Using
 
@@ -91,26 +75,6 @@ protected void onResume() {
   super.onResume();
   easyRatingDialog.showIfNeeded();
 }
-```
-
-* all **exceptions** are catched when dialog tries to show because I assume the app running is more important than to show the dialog.
-
-## Tips
-
-### Condition triggers
-
-If you want to change the default lib behavior you can create a custom Condition Trigger:
-
-```java
-EasyRatingDialog.ConditionTrigger conditionTrigger = new EasyRatingDialog.ConditionTrigger() {
-  @Override
-  public boolean shouldShow() {
-    //Your custom condition here
-    return false;
-  }
-};
-
-easyRatingDialog.setConditionTrigger(conditionTrigger);
 ```
 
 ### Useful public methods
@@ -169,77 +133,9 @@ And override the values:
 </resources>
 ```
 
-## Dagger Issues
 
-If you are using dagger pay attention to some items.
-
-One, you must provide an Activity Context to EasyRatingDialog to show the dialog. So you can do this as
-below:
-
-```java
-@Provides EasyRatingDialog provideRatingDialog(@ForActivity Context context) {
-  return new EasyRatingDialog(context);
-}
-```
-
-where `@ForActivity` is an interface that overrides other contexts provided by other modules.
-
-```java
-@Qualifier @Retention(RUNTIME)
-  public @interface ForActivity {
-}
-```
-
-Otherwise if you provide other context and try to show an execption can be occur because dialogs only can be
-attached to Activity's context.
-
-The code below prevents you to get a BadTokenException exception
-`E/EasyRatingDialog﹕ Unable to add window -- token android.os.BinderProxy@536c3920 is not valid; is your activity running?`
-
-```java
-@Provides @ForActivity Context provideActivityContext() {
-  return activity;
-}
-```
-
-If you use `@Singleton annotation to provide the Activity's context a BadTokenException can be occur after restoring from background.
-
-Remember, all **exceptions** are catched when dialog tries to show because
-I assume the app running is more important than to show the dialog.
-
-## Samples Usage
-
-There are two samples, the first is just a simple acitivity that shows the dialog and the second uses dagger injection.
-
-To run samples you can follow steps below
-
-```shell
-$ git clone git@github.com:fernandodev/easy-rating-dialog.git
-$ cd easyratingdialog
-$ ./gradlew installSampleDebug installSampleWithDaggerDebug --daemon
-```
-
-## Testing
-
-There are a simple test for the rating dialog. If you want to contribute check the tests too.
-
-```shell
-$ git clone git@github.com:fernandodev/easy-rating-dialog.git
-$ cd easyratingdialog
-$ ./gradlew assembleSampleDebugTest connectedAndroidTestSampleDebug --daemon
-```
-
-You must open an emulator before.
-
-## Showcase
-
-Have you used my library in your project? Tell me and I'll sponsor your app here ;)
-
-* [I Ching - The Oracle](https://play.google.com/store/apps/details?id=com.creativecode.iching)
-
-## Change Logs
-
-See [Change Logs file](https://github.com/fernandodev/easy-rating-dialog/blob/master/CHANGELOGS.md).
+### Screenshot
+![alt tag](https://github.com/yuxiaohui78/MyEasyRatingDialog/blob/master/screenshot/screenshot.png "Screenshot" width="320px")
 
 ## License
 
