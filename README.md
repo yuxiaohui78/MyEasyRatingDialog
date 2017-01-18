@@ -41,6 +41,13 @@ dependencies {
 	        compile 'com.github.yuxiaohui78:MyEasyRatingDialog:v1.0.2'
 	}
 ```
+Or using 1.0.3 with animation
+
+```gradle
+dependencies {
+	        compile 'com.github.yuxiaohui78:MyEasyRatingDialog:v1.0.3'
+	}
+```
 
 ## Using
 
