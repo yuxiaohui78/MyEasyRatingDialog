@@ -31,10 +31,10 @@ public final class RatingDailog extends AlertDialog
 		void OnLater();
 	}
 
-	public RatingDailog setTitle (String title){
-		super.setTitle (title);
-		return this;
-	}
+//	public RatingDailog setTitle (String title){
+//		super.setTitle (title);
+//		return this;
+//	}
 
 	public RatingDailog setContent (String content){
 		mContent = content;
@@ -82,7 +82,7 @@ public final class RatingDailog extends AlertDialog
 
 	public RatingDailog (Context context,
 						 RatingDialogListener callBack) {
-		super(context, 0);
+		super(context, R.style.rating_alert_dialog);//The Window animation needs that.
 
 		mModalInAnim = (AnimationSet) OptAnimationLoader.loadAnimation(getContext(), R.anim.modal_in);
 
@@ -91,7 +91,7 @@ public final class RatingDailog extends AlertDialog
 		setIcon(iconId);
 
 
-		super.setTitle (R.string.erd_title);
+//		super.setTitle (R.string.erd_title);
 
 		LayoutInflater inflater =
 				(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

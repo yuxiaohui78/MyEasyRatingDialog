@@ -171,7 +171,7 @@ public class EasyRatingDialog {
       }
     });
 
-    return ratingDailog.setTitle(context.getString(R.string.erd_title))
+    return ratingDailog
                 .setContent(context.getString(R.string.erd_message))
                 .setRateMeButtonText(context.getString(R.string.erd_rate_now))
                 .setNoThanksButtonText(context.getString(R.string.erd_no_thanks))
